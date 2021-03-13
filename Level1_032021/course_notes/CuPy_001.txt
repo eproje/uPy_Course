@@ -1,0 +1,79 @@
+#DN:001-Baslangic:
+
+#Gerekli programlarin indirilmesi:
+
+Asagidaki islemleri takip ederek WINDOWS sistemli bilgisayarýnýza gereken programlarý kurunuz.
+
+1. Size uygun bir konumda "Cezeri_UPY" isimli bir klasor olusturun. OR: C:\Cezeri_UPY
+2. Diger alt klasorleri olusturun.
+	..\Cezeri_UPY\esp32_firmware
+	..\Cezeri_UPY\kurulumlar
+	..\Cezeri_UPY\thonny
+	..\Cezeri_UPY\tools
+	..\Cezeri_UPY\upycraft
+	
+3. 	https://micropython.org/download/esp32/ adresinden
+		GENERIC : esp32-idf3-20200902-v1.13.bin isimli binary firmware dosyasini indirin ve "..\Cezeri_UPY\esp32_firmware" klasorune kaydedin
+		
+		https://micropython.org/resources/firmware/esp32-idf3-20200902-v1.13.bin
+		
+4. 	https://github.com/DFRobot/uPyCraft adersinden
+		uPyCraft_V1.0.exe isimli calisan dosyayi indirin ve "..\Cezeri_UPY\uPyCraft" klasorune kaydedin
+		
+		https://github.com/DFRobot/uPyCraft/blob/master/uPyCraft_V1.0.exe
+		
+5.	https://thonny.org/ adresinden thoony ide hakkinda bilgi edinin
+
+		https://github.com/thonny/thonny/releases/tag/v3.3.3 adresinden
+		
+		thonny-3.3.3-windows-portable.zip isimli dosyayi indirin ve "..\Cezeri_UPY\kurulumlar" klasorune kaydedin
+		
+		https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3-windows-portable.zip
+		
+		* dilerseniz diger alternatifleri de kullanabilirsiniz. or: thonny-3.3.3.exe isimli dosya windows icin kurulum thoony kurulumu yapar
+		
+6.	https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all adresinden
+
+		Windows (EXE) -- Driver executable (CH341SER.EXE) isimli dosyayi indirin ve "..\Cezeri_UPY\kurulumlar" klasorune kaydedin.
+		
+		https://cdn.sparkfun.com/assets/learn_tutorials/8/4/4/CH341SER.EXE
+		
+
+#Kurulum islemleri
+	ESP32 kartini bilgisayariniza baglayiniz.
+	
+	Aygit yoneticisinden bilgisayin karti gorup gormedigini kontrol edin. (seri port olarak gorecek)
+		
+1.	CH340 surucusunu kurmak
+
+	CH341SER.EXE dosyasini calistirarak  ch340 USB surucusunu kurun
+	
+	* Eger failure aliyorsan (arama: windows 10 unsigned driver installation)
+	
+		komut promt yönetici olarak
+	
+			bcdedit /set testsigning on 
+	
+		yaz islemin tamamlandigini gor ve bilgisayari yeniden baslat. Bilgisayar acilinca ardýndan tekrar kurmayý dene
+	
+		islem tamamlaninca 
+	
+			bcdedit /set testsigning off yazarak test modunu kapat
+	
+		Aygit yoneticisinden bilgisayin karti gorup gormedigini tekrar kontrol edin.
+
+2.	esp32 firmware yuklenmek
+
+	Bu islem icin elinizde cok pratik iki yol var.
+	upycraft veya thonny ile kolayca yapabilirsiniz.(baska yollar da var. temel aygit esptool.py)
+	
+	once bilgisayarinin seri portu gorup gormediginden emin olun. Port bilgisini kaydedin. COM5, COM6 v.b.
+	
+	2.1: upycraft ile:
+	
+	2.2: thonny ile
+		
+	
+	
+	
+

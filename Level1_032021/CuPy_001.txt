@@ -1,6 +1,0 @@
-Baslangic:
-
-Asagidaki islemleri takip ederek WINDOWS sistemli bilgisayarýnýza gereken programlarý kurunuz.
-
-1. Size uygun bir konumda "Cezeri_UPY" isimli bir klasor olusturun.
-2. 

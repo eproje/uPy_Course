@@ -1,0 +1,10 @@
+2. hafta 
+
+*machine ve Pin kutuphanesini inceledik
+*breadboard uzerinde 2 adet led ile ESP32 arasinda baglanti kurduk.
+*iki ledi yakýp-sonduren uygulama uzerinde calistik.
+*polis lambasý yapimini odev olarak verdik.
+
+-->
+haftaya odev kontrolu yaparak baslayacagýz.
+Ardindan IOT uygulamasi yapmayi deneyecegiz.

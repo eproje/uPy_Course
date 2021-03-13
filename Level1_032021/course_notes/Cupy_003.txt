@@ -1,0 +1,14 @@
+3. hafta
+
+* polis lambasi uygulamasini fonksiyon olusturarar en kisa hali ile yazdik.
+* try ve except komutlarini inceledik. Program durdurulduðunda ne yapilacagina dair eklenti programi gelistirdik. Bunun icin KeyboardInterrupt kesmesini kullandik
+* ESP32 micropython wifi baglantisini yapmayi amacladik
+* network kutuphanesini inceledik
+* network scan() fonksiyonu ile cevremizdeki aglari gozlemledik.
+* for komutu ile aglari listeledik
+* ESP32 micropython wifi baglantisini yaptik.
+* adafruit.io sitesini inceledik. siteye uye olduk. Yeni bir dashboard ve lamba1 ve lamba2 isimlerinde iki adet feed tanimladik.
+* adafruit.io uzerinden aldigimiz bilgiler ile iki ledi calistiran ilk IOT uygulamamizi yazdik.
+
+-->
+haftaya konu tekrari ile baslayacagiz. Ardinan IOT programimizi bilgisayardan bagimsiz calisir hale getirecegiz. ROLE karti ile buyuk gucteki lambalari acip kapamayi deneyecegiz. 
