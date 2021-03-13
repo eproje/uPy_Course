@@ -7,10 +7,6 @@ adresine giderek uye olun
 	bu ornekte lamba1 ve lamba2 isminde 2 adet feed tanimliyoruz
 4. dashboard ekranindan "My Key" menusunu kullanarak USERNAME ve IO_KEY bilgilerinizi alin ve not edin.
 
-or:
-ADAFRUIT_IO_USERNAME = "Cezeri"
-ADAFRUIT_IO_KEY = "aio_ATQH26cyTl2R2MhZrBqMtwbKD11m"
-
 5. api baglanti linkinin nasil olacagini gorun.
 bunun icin tanimladiginiz feed uzerine tiklayarak detaylar bolumune gecin
 ardindan "Feed Info" seceneginden 
@@ -40,8 +36,8 @@ Led2=Pin(23, Pin.OUT)
 # ornekteki bilgiler sizi baska kullaniciya baglar
 
 
-aio_key = "aio_ATQH26cyTl2R2MhZrBqMtwbKD11m"
-aio_username= "Cezeri"
+aio_key = "" #kendi adafruit key inizi yazın
+aio_username= "" #kendi adafruit kullanici adinizi yazin
 
 headers = {'X-AIO-Key': aio_key, 'Content-Type': 'application/json'}
 
