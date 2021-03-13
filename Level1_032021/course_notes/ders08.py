@@ -42,10 +42,12 @@ aio_username= "" #kendi adafruit kullanici adinizi yazin
 headers = {'X-AIO-Key': aio_key, 'Content-Type': 'application/json'}
 
 #wifi aginiza baglanin
+wifi_name='wifi ag adi'
+wifi_pwd='wifi sifresi'
 
 wifi=network.WLAN(network.STA_IF)
 wifi.active(True)
-wifi.connect('FB007', 'Cezeri1049')
+wifi.connect(wifi_name, wifi_pwd)
 while not wifi.isconnected():
     pass
 
