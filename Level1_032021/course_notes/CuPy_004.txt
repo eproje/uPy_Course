@@ -1,0 +1,13 @@
+4.hafta
+
+bir onceki ornekde anlasilmayan konularin tekrari yapilarak baslandi.
+
+Ogrencilerin kitap uygulamalarina bakmadiklari,
+ornek uzerinde kendi calismalarini yapmadiklari goruldu.
+
+python veya baska bir dilin ancak kendi kendine bolca ornek cozerek ogrenilebilecegi anlatildi.
+Sayfa 85 e kadar olan ornekleri denemeleri istendi.
+
+yeni islenen ders : ders09
+upy kartinin bilgisayardan bagimsiz calismasi
+ROLE kartinin sisteme baglantisi ve kullanilmasi 
