@@ -24,6 +24,7 @@ SAATFARKI=3
 dakikasayaci=0
 haftaninGUNU=('Pazartesi','Sali','Carsamba','pPersembe','Cuma','Cumartesi','Pazar')
 
+
 def ntpGuncelle():
     ntptime.settime()
     print("Saat guncellendi")
