@@ -1,92 +1,60 @@
+# DHT11 sicaklik ve nem sensoru
+# DHT11    ESP32
+# sinyal   2
+# VCC      3V
+# GND      G
+# kaynak: https://docs.micropython.org/en/latest/esp8266/tutorial/dht.html
+#
+# https://docs.micropython.org/en/latest/library/uerrno.html
 
-python kursu
+import machine
+from machine import Pin
+import dht
+import time
+import uerrno
 
-1. Çok kolay öğrenileniliyor
-2. ESP32 için elektronik bilgisinin olmasını gerekir
-3. Kurs iki aşamalı olmalı 1.başlangıç 2.ESP olmalı
-4.
+#dht_pin = Pin(2, Pin.IN)
+#DHTsensor= dht.DHT11(dht_pin)
+#veya
+DHTsensor= dht.DHT11( Pin(2, Pin.IN) )
+#hatalar
+# IndentationError (girinti hatası)
+# OSError:ETIMEDOUT (haberleşme zaman aşımı)
 
-Ekran renkli olmalı 1.5 inc kadar
+dht_okuma_zamani=0
 
-PROJELER:
-    
-EV Enerji yönetimi kontrol sistemi
-AMPERMETRE
-VOLTMETRE
-Enerji güç tüketimi data kayıt cihazı (or: adafuruit)
+def DHT_OKU():
+    global dht_okuma_zamani    
+    try:
+        DHTsensor.measure()
+        sicaklik= DHTsensor.temperature() # santigrad cinsinde
+        nem=DHTsensor.humidity() # % cinsinden nem degeri
+        print ("sıcaklik ", sicaklik, " nem ", nem)
+        time.sleep(dht_okuma_zamani)
+        
+    except Exception as hata:
+        print (hata)
+        #print (hata.args[0])
+        # ETIMEDOUT hatasi slave cihazdan verilen zaman içinde veri gelmiyor
+        # EX print(uerrno.errorcode[uerrno.EEXIST])
+        if (hata.args[0]==uerrno.ETIMEDOUT) : #ETIMEDOUT
+            print ("DHT11 zaman asimi")
+            dht_okuma_zamani+=0.1
+            print("DHT_time=",dht_okuma_zamani)
+try:
+    while True:
+        DHT_OKU()
+        
+except KeyboardInterrupt:
+    print ("Program Sonlandirildi")
 
-micropyton Büyük saat (220V led lambalar ile)
-Ege DENİZ 
-Duru Küçükkaya
+except OSError:
+    print ("Sistem hatasi")
 
-Albeza
-Cezeri EVCAR Telemetri sistemi
-
-Oğuzhan AYDIN
-Adafuruit.IO ile EV otomasyonu
-
-Mehmet Asaf AKDOĞAN
-micropython ESP32 ile Solar şarj cihazı
-
-Metin Hocam
-Micropyton kontrollü güç kaynağı
-
-
-Esma Rabia Özsaraç
-?
-
-
-Zahit Burhan
-ESP32 micropython OYUN konsolu yapımı
-
-
-Feyza YAREN
-ESP32 Micropython ile Sosyal mesafe sensörü
-
-Elif Yüce
-?
-
-Beril KEÇE
-Micropython ESP roket kontrol kartı tasarımı
-
-Ayşegül
-?
-
-Azra ARSLAN
-?
-
-Furkan BARUT
-?
-
-Fatih ADIBEKE
-Ahmet
-ESp32 Micropython 3d yazıcı ile smartwatch
+except Exception as e:
+    print (e)
 
 
-
-Zeynep Tuana
-?
-
-Elif Sena DOĞAN
-?
-
-İshak Burak CAN
-?
-
-Fatih Erdem Canpolat:
-ESP32 Micropython dron/ucak telemetri sistemi    
-    
-Koray CAN
-ESP32 Micropython Sualtı robot telemetri sistemi
-
-İbrahim hoca
-?
-
-Yasar hoca
-??
-
-Hüseyin hoca
-istiklal marşı cihazı ()
 
 
 
